@@ -17,12 +17,11 @@ const productRoutes = require('./routes/product.routes.js')
 
 
 app.use('/api/product', productRoutes)
-app.get('/api/product', (req, res) => {
+app.get('/', (req, res) => {
     res.status(200).json({
         message: 'Crud app.js is listening'
     })
 })
-
 
 // connect database
 const PORT = process.env.PORT || 5000
